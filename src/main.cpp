@@ -59,12 +59,21 @@ uint8_t broadcastAddress[] = { 0x24, 0x0A, 0xC4, 0x9B, 0x8F, 0xEC };
 
 void OnDataRecv(const uint8_t* mac, const uint8_t* incomingData, int len) {
     memcpy(&recv_mess, incomingData, sizeof(recv_mess));
-    Serial.print("recv turn : ");
-    Serial.println(recv_mess.turn);
+    // Serial.print("recv turn : ");
+    // Serial.println(recv_mess.turn);
     turn = recv_mess.turn;
     mode = recv_mess.mode;
     x = recv_mess.y;
     y = recv_mess.x;
+
+    if(turn){
+        digitalWrite(green,0);          //yellow = turn MK
+        digitalWrite(yellow,1);
+    }
+    else{
+        digitalWrite(green,1);          //green = turn Tong
+        digitalWrite(yellow,0);
+    }
 
     if(mode == 2){
         recv_first_item = 0;
@@ -163,16 +172,16 @@ void OnDataRecv(const uint8_t* mac, const uint8_t* incomingData, int len) {
     /* Received Position from gameEngine */
     MAZE[x][y] = 0;
     
-    Serial.println();
-    Serial.print("turn : ");
-    Serial.println(turn);
-    Serial.print("mode : ");
-    Serial.println(mode);
-    Serial.print("x : ");
-    Serial.println(x);
-    Serial.print("y : ");
-    Serial.println(y);
-    Serial.println("====================");
+    // Serial.println();
+    // Serial.print("turn : ");
+    // Serial.println(turn);
+    // Serial.print("mode : ");
+    // Serial.println(mode);
+    // Serial.print("x : ");
+    // Serial.println(x);
+    // Serial.print("y : ");
+    // Serial.println(y);
+    // Serial.println("====================");
 }
 
 
@@ -214,16 +223,6 @@ void setup() {
 }
 
 void loop() {
-
-    if(turn){
-        digitalWrite(green,0);          //yellow = turn MK
-        digitalWrite(yellow,1);
-    }
-    else{
-        digitalWrite(green,1);          //green = turn Tong
-        digitalWrite(yellow,0);
-    }
-
     if(mode == 1){
         digitalWrite(red,1);            //red = Duel mode
     }
