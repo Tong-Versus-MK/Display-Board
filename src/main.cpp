@@ -245,37 +245,37 @@ void loop() {
         digitalWrite(twocolour_0_2_Red, 0);
         digitalWrite(twocolour_0_2_Yellow, 0);
     }
-    //  Pos (7,0) 
+    //  Pos (7,1) 
     if (MAZE[1][7] == 0) {
         digitalWrite(twocolour_1_7_Red, 0);
         digitalWrite(twocolour_1_7_Yellow, 0);
     }
-    //  Pos (3,3) 
+    //  Pos (4,2) 
     if (MAZE[2][4] == 0) {
         digitalWrite(twocolour_2_4_Red, 0);
         digitalWrite(twocolour_2_4_Yellow, 0);
     }
-    //  Pos (4,3) 
+    //  Pos (7,3) 
     if (MAZE[3][7] == 0) {
         digitalWrite(twocolour_3_7_Red, 0);
         digitalWrite(twocolour_3_7_Yellow, 0);
     }
-    //  Pos (3,4) 
+    //  Pos (1,5) 
     if (MAZE[5][1] == 0) {
         digitalWrite(twocolour_5_1_Red, 0);
         digitalWrite(twocolour_5_1_Yellow, 0);
     }
-    //  Pos (4,4) 
+    //  Pos (3,5) 
     if (MAZE[5][3] == 0) {
         digitalWrite(twocolour_5_3_Red, 0);
         digitalWrite(twocolour_5_3_Yellow, 0);
     }
-    //  Pos (0,7) 
+    //  Pos (2,7) 
     if (MAZE[7][2] == 0) {
         digitalWrite(twocolour_7_2_Red, 0);
         digitalWrite(twocolour_7_2_Yellow, 0);
     }
-    //  Pos (3,7) 
+    //  Pos (5,7) 
     if (MAZE[7][5] == 0) {
         digitalWrite(twocolour_7_5_Red, 0);
         digitalWrite(twocolour_7_5_Yellow, 0);
