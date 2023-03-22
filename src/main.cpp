@@ -28,20 +28,20 @@ int MAZE[BoardSize][BoardSize] = {
 
 int twocolour_0_2_Yellow = 23;
 int twocolour_0_2_Red = 22;
-int twocolour_0_7_Yellow = 21;
-int twocolour_0_7_Red = 19;
-int twocolour_3_3_Yellow = 18;
-int twocolour_3_3_Red = 5;
-int twocolour_3_4_Yellow = 17;
-int twocolour_3_4_Red = 16;
-int twocolour_4_3_Yellow = 4;
-int twocolour_4_3_Red = 0;
-int twocolour_4_4_Yellow = 2;
-int twocolour_4_4_Red = 15;
-int twocolour_7_0_Yellow = 26;
-int twocolour_7_0_Red = 27;
-int twocolour_7_3_Yellow = 14;
-int twocolour_7_3_Red = 12;
+int twocolour_1_7_Yellow = 21;
+int twocolour_1_7_Red = 19;
+int twocolour_2_4_Yellow = 18;
+int twocolour_2_4_Red = 5;
+int twocolour_3_7_Yellow = 17;
+int twocolour_3_7_Red = 16;
+int twocolour_5_1_Yellow = 4;
+int twocolour_5_1_Red = 0;
+int twocolour_5_3_Yellow = 2;
+int twocolour_5_3_Red = 15;
+int twocolour_7_2_Yellow = 26;
+int twocolour_7_2_Red = 27;
+int twocolour_7_5_Yellow = 14;
+int twocolour_7_5_Red = 12;
 
 typedef struct recv_message {
     int mode;
@@ -101,80 +101,80 @@ void OnDataRecv(const uint8_t* mac, const uint8_t* incomingData, int len) {
         }
 
         if (board[1] == 2) {
-            MAZE[0][7] = 2;
-            digitalWrite(twocolour_0_7_Red, 1);
-            digitalWrite(twocolour_0_7_Yellow, 0);
+            MAZE[1][7] = 2;
+            digitalWrite(twocolour_1_7_Red, 1);
+            digitalWrite(twocolour_1_7_Yellow, 0);
         }
         else if (board[1] == 3) {
-            MAZE[0][7] = 3;
-            digitalWrite(twocolour_0_7_Yellow, 1);
-            digitalWrite(twocolour_0_7_Red, 0);
+            MAZE[1][7] = 3;
+            digitalWrite(twocolour_1_7_Yellow, 1);
+            digitalWrite(twocolour_1_7_Red, 0);
         }
 
         if (board[2] == 2) {
-            MAZE[3][3] = 2;
-            digitalWrite(twocolour_3_3_Red, 1);
-            digitalWrite(twocolour_3_3_Yellow, 0);
+            MAZE[2][4] = 2;
+            digitalWrite(twocolour_2_4_Red, 1);
+            digitalWrite(twocolour_2_4_Yellow, 0);
         }
         else if (board[2] == 3) {
-            MAZE[3][3] = 3;
-            digitalWrite(twocolour_3_3_Yellow, 1);
-            digitalWrite(twocolour_3_3_Red, 0);
+            MAZE[2][4] = 3;
+            digitalWrite(twocolour_2_4_Yellow, 1);
+            digitalWrite(twocolour_2_4_Red, 0);
         }
 
         if (board[3] == 2) {
-            MAZE[3][4] = 2;
-            digitalWrite(twocolour_3_4_Red, 1);
-            digitalWrite(twocolour_3_4_Yellow, 0);
+            MAZE[3][7] = 2;
+            digitalWrite(twocolour_3_7_Red, 1);
+            digitalWrite(twocolour_3_7_Yellow, 0);
         }
         else if (board[3] == 3) {
-            MAZE[3][4] = 3;
-            digitalWrite(twocolour_3_4_Yellow, 1);
-            digitalWrite(twocolour_3_4_Red, 0);
+            MAZE[3][7] = 3;
+            digitalWrite(twocolour_3_7_Yellow, 1);
+            digitalWrite(twocolour_3_7_Red, 0);
         }
 
         if (board[4] == 2) {
-            MAZE[4][3] = 2;
-            digitalWrite(twocolour_4_3_Red, 1);
-            digitalWrite(twocolour_4_3_Yellow, 0);
+            MAZE[5][1] = 2;
+            digitalWrite(twocolour_5_1_Red, 1);
+            digitalWrite(twocolour_5_1_Yellow, 0);
         }
         else if (board[4] == 3) {
-            MAZE[4][3] = 3;
-            digitalWrite(twocolour_4_3_Yellow, 1);
-            digitalWrite(twocolour_4_3_Red, 0);
+            MAZE[5][1] = 3;
+            digitalWrite(twocolour_5_1_Yellow, 1);
+            digitalWrite(twocolour_5_1_Red, 0);
         }
 
         if (board[5] == 2) {
-            MAZE[4][4] = 2;
-            digitalWrite(twocolour_4_4_Red, 1);
-            digitalWrite(twocolour_4_4_Yellow, 0);
+            MAZE[5][3] = 2;
+            digitalWrite(twocolour_5_3_Red, 1);
+            digitalWrite(twocolour_5_3_Yellow, 0);
         }
         else if (board[5] == 3) {
-            MAZE[4][4] = 3;
-            digitalWrite(twocolour_4_4_Yellow, 1);
-            digitalWrite(twocolour_4_4_Red, 0);
+            MAZE[5][3] = 3;
+            digitalWrite(twocolour_5_3_Yellow, 1);
+            digitalWrite(twocolour_5_3_Red, 0);
         }
 
         if (board[6] == 2) {
-            MAZE[7][0] = 2;
-            digitalWrite(twocolour_7_0_Red, 1);
-            digitalWrite(twocolour_7_0_Yellow, 0);
+            MAZE[7][2] = 2;
+            digitalWrite(twocolour_7_2_Red, 1);
+            digitalWrite(twocolour_7_2_Yellow, 0);
         }
         else if (board[6] == 3) {
-            MAZE[7][0] = 3;
-            digitalWrite(twocolour_7_0_Yellow, 1);
-            digitalWrite(twocolour_7_0_Red, 0);
+            MAZE[7][2] = 3;
+            digitalWrite(twocolour_7_2_Yellow, 1);
+            digitalWrite(twocolour_7_2_Red, 0);
         }
 
         if (board[7] == 2) {
-            MAZE[7][3] = 2;
-            digitalWrite(twocolour_7_3_Red, 1);
-            digitalWrite(twocolour_7_3_Yellow, 0);
+            MAZE[7][5] = 2;
+            digitalWrite(twocolour_7_5_Red, 1);
+            digitalWrite(twocolour_7_5_Yellow, 0);
         }
         else if (board[7] == 3) {
-            MAZE[7][3] = 3;
-            digitalWrite(twocolour_7_3_Yellow, 1);
-            digitalWrite(twocolour_7_3_Red, 0);
+            MAZE[7][5] = 3;
+            digitalWrite(twocolour_7_5_Yellow, 1);
+            digitalWrite(twocolour_7_5_Red, 0);
         }
         recv_first_item = 1;
     }
@@ -216,20 +216,20 @@ void setup() {
 
     pinMode(twocolour_0_2_Yellow, OUTPUT);
     pinMode(twocolour_0_2_Red, OUTPUT);
-    pinMode(twocolour_0_7_Yellow, OUTPUT);
-    pinMode(twocolour_0_7_Red, OUTPUT);
-    pinMode(twocolour_3_3_Yellow, OUTPUT);
-    pinMode(twocolour_3_3_Red, OUTPUT);
-    pinMode(twocolour_3_4_Yellow, OUTPUT);
-    pinMode(twocolour_3_4_Red, OUTPUT);
-    pinMode(twocolour_4_3_Yellow, OUTPUT);
-    pinMode(twocolour_4_3_Red, OUTPUT);
-    pinMode(twocolour_4_4_Yellow, OUTPUT);
-    pinMode(twocolour_4_4_Red, OUTPUT);
-    pinMode(twocolour_7_0_Yellow, OUTPUT);
-    pinMode(twocolour_7_0_Red, OUTPUT);
-    pinMode(twocolour_7_3_Yellow, OUTPUT);
-    pinMode(twocolour_7_3_Red, OUTPUT);
+    pinMode(twocolour_1_7_Yellow, OUTPUT);
+    pinMode(twocolour_1_7_Red, OUTPUT);
+    pinMode(twocolour_2_4_Yellow, OUTPUT);
+    pinMode(twocolour_2_4_Red, OUTPUT);
+    pinMode(twocolour_3_7_Yellow, OUTPUT);
+    pinMode(twocolour_3_7_Red, OUTPUT);
+    pinMode(twocolour_5_1_Yellow, OUTPUT);
+    pinMode(twocolour_5_1_Red, OUTPUT);
+    pinMode(twocolour_5_3_Yellow, OUTPUT);
+    pinMode(twocolour_5_3_Red, OUTPUT);
+    pinMode(twocolour_7_2_Yellow, OUTPUT);
+    pinMode(twocolour_7_2_Red, OUTPUT);
+    pinMode(twocolour_7_5_Yellow, OUTPUT);
+    pinMode(twocolour_7_5_Red, OUTPUT);
 }
 
 void loop() {
@@ -246,38 +246,38 @@ void loop() {
         digitalWrite(twocolour_0_2_Yellow, 0);
     }
     //  Pos (7,0) 
-    if (MAZE[0][7] == 0) {
-        digitalWrite(twocolour_0_7_Red, 0);
-        digitalWrite(twocolour_0_7_Yellow, 0);
+    if (MAZE[1][7] == 0) {
+        digitalWrite(twocolour_1_7_Red, 0);
+        digitalWrite(twocolour_1_7_Yellow, 0);
     }
     //  Pos (3,3) 
-    if (MAZE[3][3] == 0) {
-        digitalWrite(twocolour_3_3_Red, 0);
-        digitalWrite(twocolour_3_3_Yellow, 0);
+    if (MAZE[2][4] == 0) {
+        digitalWrite(twocolour_2_4_Red, 0);
+        digitalWrite(twocolour_2_4_Yellow, 0);
     }
     //  Pos (4,3) 
-    if (MAZE[3][4] == 0) {
-        digitalWrite(twocolour_3_4_Red, 0);
-        digitalWrite(twocolour_3_4_Yellow, 0);
+    if (MAZE[3][7] == 0) {
+        digitalWrite(twocolour_3_7_Red, 0);
+        digitalWrite(twocolour_3_7_Yellow, 0);
     }
     //  Pos (3,4) 
-    if (MAZE[4][3] == 0) {
-        digitalWrite(twocolour_4_3_Red, 0);
-        digitalWrite(twocolour_4_3_Yellow, 0);
+    if (MAZE[5][1] == 0) {
+        digitalWrite(twocolour_5_1_Red, 0);
+        digitalWrite(twocolour_5_1_Yellow, 0);
     }
     //  Pos (4,4) 
-    if (MAZE[4][4] == 0) {
-        digitalWrite(twocolour_4_4_Red, 0);
-        digitalWrite(twocolour_4_4_Yellow, 0);
+    if (MAZE[5][3] == 0) {
+        digitalWrite(twocolour_5_3_Red, 0);
+        digitalWrite(twocolour_5_3_Yellow, 0);
     }
     //  Pos (0,7) 
-    if (MAZE[7][0] == 0) {
-        digitalWrite(twocolour_7_0_Red, 0);
-        digitalWrite(twocolour_7_0_Yellow, 0);
+    if (MAZE[7][2] == 0) {
+        digitalWrite(twocolour_7_2_Red, 0);
+        digitalWrite(twocolour_7_2_Yellow, 0);
     }
     //  Pos (3,7) 
-    if (MAZE[7][3] == 0) {
-        digitalWrite(twocolour_7_3_Red, 0);
-        digitalWrite(twocolour_7_3_Yellow, 0);
+    if (MAZE[7][5] == 0) {
+        digitalWrite(twocolour_7_5_Red, 0);
+        digitalWrite(twocolour_7_5_Yellow, 0);
     }
 }
